@@ -1,39 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pathshala Youth</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-<header>
-  <h1>Pathshala Youth</h1>
-  <p>For 9th to 12th Students</p>
-</header>
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 text-center text-2xl font-bold">
+    Pathshala Youth (9th to 12th)
+  </header>
 
-<section class="pdf-container">
+  <!-- Hero Section -->
+  <section class="text-center p-10">
+    <h1 class="text-4xl font-bold mb-4">Welcome to Pathshala Youth</h1>
+    <p class="text-lg text-gray-700">Get Premium Study Materials, Assignments & PDF Solutions</p>
+  </section>
 
-  <div class="card">
-    <h2>Class 9 Science Notes</h2>
-    <p>Price: ₹49</p>
-    <button onclick="buyPDF('science9.pdf')">Buy & Download</button>
-  </div>
+  <!-- Products Section -->
+  <section class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
 
-  <div class="card">
-    <h2>Class 10 Math Notes</h2>
-    <p>Price: ₹59</p>
-    <button onclick="buyPDF('math10.pdf')">Buy & Download</button>
-  </div>
+    <!-- Card 1 -->
+    <div class="bg-white p-4 rounded-2xl shadow">
+      <h2 class="text-xl font-bold">Std 9 PDF Pack</h2>
+      <p class="text-gray-600">All Subjects Notes</p>
+      <p class="text-green-600 font-bold mt-2">₹49</p>
+      <button onclick="buyNow()" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
 
-  <div class="card">
-    <h2>Class 12 Physics Notes</h2>
-    <p>Price: ₹79</p>
-    <button onclick="buyPDF('physics12.pdf')">Buy & Download</button>
-  </div>
+    <!-- Card 2 -->
+    <div class="bg-white p-4 rounded-2xl shadow">
+      <h2 class="text-xl font-bold">Std 10 PDF Pack</h2>
+      <p class="text-gray-600">Board Important Questions</p>
+      <p class="text-green-600 font-bold mt-2">₹69</p>
+      <button onclick="buyNow()" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
 
-</section>
+    <!-- Card 3 -->
+    <div class="bg-white p-4 rounded-2xl shadow">
+      <h2 class="text-xl font-bold">Std 11-12 PDF Pack</h2>
+      <p class="text-gray-600">Full Notes + Assignments</p>
+      <p class="text-green-600 font-bold mt-2">₹99</p>
+      <button onclick="buyNow()" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Buy Now</button>
+    </div>
+
+  </section>
+
+  <!-- Payment Section -->
+  <section class="text-center p-10 bg-white mt-6">
+    <h2 class="text-2xl font-bold mb-4">Payment Method</h2>
+    <p>Pay via UPI: <strong>yourupi@bank</strong></p>
+    <p class="text-gray-600">After payment, send screenshot on WhatsApp to receive PDF</p>
+    <button onclick="contactWhatsApp()" class="mt-4 bg-green-500 text-white px-6 py-2 rounded">Contact on WhatsApp</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center p-4 mt-6">
+    © 2026 Pathshala Youth | All Rights Reserved
+  </footer>
+
+  <script>
+    function buyNow() {
+      alert("Please complete payment via UPI and contact on WhatsApp.");
+    }
+
+    function contactWhatsApp() {
+      window.open("https://wa.me/9081991931", "_blank");
+    }
+  </script>
+
+</body>
+</html>
 
 <script src="script.js"></script>
 
